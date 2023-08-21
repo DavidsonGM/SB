@@ -1,0 +1,17 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile, Link and execute",
+            "type": "shell",
+            "command": "nasm -f elf32 -g -o program.o program.asm && ld -m elf_i386 -o program program.o && gdb program"
+        },
+        {
+            "label": "Compile and Link",
+            "type": "shell",
+            "command": "nasm -f elf32 -o program.o program.asm && ld -m elf_i386 -o program program.o"
+        }
+    ]
+}
